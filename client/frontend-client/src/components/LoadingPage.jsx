@@ -1,10 +1,10 @@
 import { LineWave } from "react-loader-spinner";
-import { styles } from "./LoadingPage.module.css";
+import styles from "./LoadingPage.module.css";
 
 const LoadingPage = () => {
 
     return (
-        <div style={styles.container}>
+        <div className={styles.container}>
             <LineWave
                 height="100"
                 width="100"
