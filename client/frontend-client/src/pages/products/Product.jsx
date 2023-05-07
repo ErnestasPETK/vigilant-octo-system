@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import styles from "./Product.module.css";
 
 const Product = (props) => {
 
@@ -11,10 +12,24 @@ const Product = (props) => {
     const thumbnail = props.Thumbnail;
 
     return (
-        <>
-            <img src={productImages[0]} alt="" />
-            <p>yeha</p>
-        </>
+        <div className={styles.container}>
+            <div className={styles.imageContainer}>
+                <img src={thumbnail} alt={`Thumbnail for ${title}`} />
+            </div>
+            <div className={styles.descriptionContainer}>
+                <h2>{title}</h2>
+                <div className={styles.descriptionSplitBox} >
+                    <div className={styles.descriptionLeftSplit}>
+                        <p>{brand.toUpperCase()}</p>
+                        <p>{category.toUpperCase()}</p>
+                    </div>
+                    <div className={styles.descriptionRightSplit}>
+                        <h3 className={styles.price} >{price} $</h3>
+                    </div>
+                </div>
+                <p>{description}</p>
+            </div>
+        </div>
     )
 };
 
