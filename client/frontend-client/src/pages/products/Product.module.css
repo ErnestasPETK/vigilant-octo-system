@@ -70,6 +70,7 @@
 .descriptionSplitBox .descriptionLeftSplit{
     width: 50%;
     height: auto;
+    font-weight: 600;
 }
 .descriptionSplitBox .descriptionRightSplit{
     width: 50%;
@@ -77,6 +78,7 @@
     display: flex;
     justify-content: center;
     align-content: center;
+    font-weight: bold;
 }
 .descriptionSplitBox .descriptionRightSplit h3{
     font-size: 1.7rem;

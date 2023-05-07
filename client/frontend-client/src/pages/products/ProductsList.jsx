@@ -1,14 +1,14 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { selectAllProducts, selectStatus, fetchProductsFromAPI } from "./productsSlice";
+import { selectStatus, fetchProductsFromAPI } from "./productsSlice";
 import ErrorPage from "../error/ErrorPage"
+import LoadingPage from "../../components/LoadingPage";
 import ProductsContainer from "./ProductsContainer";
 
 const ProductsList = () => {
 
 
     const dispatch = useDispatch();
-    const products = useSelector(selectAllProducts);
     const productsStatus = useSelector(selectStatus);
     useEffect(() => {
         if (productsStatus === 'idle') {
@@ -25,7 +25,7 @@ const ProductsList = () => {
             break;
         case "loading":
             content = <>
-                <ProductsContainer />
+                <LoadingPage />
 
             </>
             break;
@@ -45,10 +45,6 @@ const ProductsList = () => {
             </>
             break;
     }
-
-
-    console.log("products");
-    console.log(products);
 
     return content;
 };
