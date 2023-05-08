@@ -12,7 +12,6 @@ class ListProductsView(generics.ListAPIView):
 
     def get_queryset(self):
         category = self.request.query_params.get("category")
-
         if category:
             if models.Product.objects.filter(category=category).exists():
                 return models.Product.objects.filter(category=category)

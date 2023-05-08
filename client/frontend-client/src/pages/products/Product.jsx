@@ -3,7 +3,8 @@ import styles from "./Product.module.css";
 
 const Product = (props) => {
 
-    const productImages = props.ProductImages;
+    // eslint-disable-next-line no-unused-vars
+    const ProductImage = props.ProductImage;
     const title = props.Title;
     const description = props.Description;
     const brand = props.Brand;
@@ -34,11 +35,11 @@ const Product = (props) => {
 };
 
 Product.propTypes = {
-    ProductImages: PropTypes.array,
+    ProductImage: PropTypes.string,
     Title: PropTypes.string,
     Description: PropTypes.string,
     Brand: PropTypes.string,
-    Price: PropTypes.string,
+    Price: PropTypes.number,
     Category: PropTypes.string,
     Thumbnail: PropTypes.string,
 

@@ -1,9 +1,10 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { selectStatus, fetchProductsFromAPI } from "./productsSlice";
+import { selectStatus, fetchProductsFromAPI, selectError } from "./productsSlice";
 import ErrorPage from "../error/ErrorPage"
 import LoadingPage from "../../components/LoadingPage";
 import ProductsContainer from "./ProductsContainer";
+import { redirect } from "react-router-dom";
 
 const ProductsList = () => {
 
@@ -15,6 +16,11 @@ const ProductsList = () => {
             dispatch(fetchProductsFromAPI())
         }
     }, [productsStatus, dispatch])
+
+    const errorStatus = useSelector(selectError);
+    if (errorStatus) {
+        return redirect("/error")
+    }
 
     let content;
     switch (productsStatus) {
