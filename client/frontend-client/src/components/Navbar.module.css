@@ -1,0 +1,27 @@
+.container{
+    position: sticky;
+    width: 100vw;
+    height: 3.5rem;
+    max-height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    top: 0;
+    background-color: #242424;
+
+}
+
+.navButton{
+    height:90%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: #3a3a3a;
+    margin: 0rem 2rem;
+    padding: 0rem 1rem;
+    border-radius: .5rem;
+}
+
+.navButton a{
+}

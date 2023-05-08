@@ -20,6 +20,10 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage Error={"Page not found"} />,
 
   },
+  {
+    path: "error",
+    element: <ErrorPage />
+  }
 ])
 
 const App = () => {

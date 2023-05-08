@@ -7,7 +7,7 @@ const ErrorPage = (props) => {
     return (
         <>
             {errorMessage ? <p>{errorMessage.toUpperCase()}</p> :
-                <p>No error</p>
+                <p>NOT FOUND 404</p>
 
             }
         </>
